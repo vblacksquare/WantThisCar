@@ -99,6 +99,7 @@ class Updater(metaclass=SingletonMeta):
 
             for car_id in car_ids:
                 if car_id in temp_car_ids:
+                    self.log.debug(f"Got old car -> {car_id}")
                     continue
 
                 tasks.append(self.process_new_car(car_id=car_id, query=query, user_ids=user_ids))

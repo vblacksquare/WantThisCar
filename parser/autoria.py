@@ -186,7 +186,7 @@ class Autoria(metaclass=SingletonMeta):
                 bidfax_link=bidfax_link,
                 lot_number=lot_number,
                 auction_name=auction_name,
-                photos=photos,
+                photos=photos[:-1],
                 photos_auction=photos_auction,
                 query_key=query_key
             )

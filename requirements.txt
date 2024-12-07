@@ -1,0 +1,5 @@
+motor
+loguru
+aiogram
+aiohttp
+bs4

@@ -1,0 +1,230 @@
+# English translations for UniBot.
+# Copyright (C) 2024 UniStuff
+# This file is distributed under the same license as the UniBot project.
+# FIRST AUTHOR <minka.denis@gmail.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: minka.denis@gmail.com\n"
+"POT-Creation-Date: 2024-12-07 00:00\n"
+"PO-Revision-Date: 2024-12-07 00:00\n"
+"Last-Translator: Denis <minka.denis@gmail.com>\n"
+"Language: en\n"
+"Language-Team: en <minka.denis@gmail.com>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+#: general
+msgid "click_me_bt"
+msgstr "👉 натисни на мене 👈"
+
+msgid "transition_msg"
+msgstr "Натисни на <b>кнопку нище</b> щоб продовжити"
+
+msgid "back_bt"
+msgstr "назад ⬅️"
+
+msgid "back_left_bt"
+msgstr "⬅️ назад"
+
+msgid "skip_bt"
+msgstr "продовжити ➡️"
+
+msgid "suicide_bt"
+msgstr "🗑"
+
+msgid "wrong"
+msgstr "❌"
+
+msgid "right"
+msgstr "✅"
+
+msgid "empty"
+msgstr "відсутня"
+
+msgid "till"
+msgstr "до"
+
+msgid "pin"
+msgstr "📌"
+
+msgid "accept_bt"
+msgstr "Я згоден 👍"
+
+msgid "try_again_bt"
+msgstr "Спробувати ще раз 🔄"
+
+msgid "left_bt"
+msgstr "⬅️"
+
+msgid "right_bt"
+msgstr "➡️"
+
+msgid "update_bt"
+msgstr "🔄"
+
+#: language
+msgid "language_bt"
+msgstr "Мова 🗺"
+
+msgid "language_msg"
+msgstr "Обери свою мову"
+
+msgid "en"
+msgstr "English 🇺🇸"
+
+msgid "uk"
+msgstr "Українська 🇺🇦"
+
+msgid "ru"
+msgstr "Русский"
+
+msgid "next_photo_bt"
+msgstr "Наступне фото"
+
+msgid "prev_photo_bt"
+msgstr "Попереднє фото"
+
+msgid "autoria_catalog_bt"
+msgstr "Показати фото з Autoria"
+
+msgid "auction_catalog_bt"
+msgstr "Показати фото з аукціону CША"
+
+msgid "autoria_source"
+msgstr "Autoria"
+
+msgid "auction_source"
+msgstr "аукціоні США"
+
+msgid "car_msg"
+msgstr "<b>{title}</b>"
+"\nПоказано фото {photo_i} із {photo_amount} на {source}"
+"\n<a href='{photo}'>&#8203;</a>"
+"\nЦіна: <i>{price}</i> 💵"
+"\nПробіг: <i>{mileage}</i> тис. км 👣"
+"\nЛокація: <i>{location}</i> 🗺"
+"\n\n<a href='{autoria}'>Autoria</a>, <s>Bidfax</s>"
+
+msgid "car_bidfax_msg"
+msgstr "<b>{title}</b>"
+"\nПоказано фото {photo_i} із {photo_amount} на {source}"
+"\n<a href='{photo}'>&#8203;</a>"
+"\nЦіна: <i>{price}</i> 💵"
+"\nПробіг: <i>{mileage} тис. км</i> 👣"
+"\nЛокація: <i>{location}</i> 🗺"
+"\n\n<a href='{autoria}'>Autoria</a>, <a href='{bidfax}'>Bidfax</a>"
+
+msgid "no_destination_msg"
+msgstr "Для початку вам потрібно прив'язати мене до каналу в який я буду відправляти нові пропозиції"
+
+msgid "add_channel_bt"
+msgstr "Прив'язати до каналу 🔗"
+
+msgid "added_channel_msg"
+msgstr "Ви успішно додали мене до каналу <code>{title}</code>"
+
+msgid "car_type_0"
+msgstr "Будь-який"
+
+msgid "car_type_1"
+msgstr "Легкові"
+
+msgid "car_type_2"
+msgstr "Мото"
+
+msgid "car_type_3"
+msgstr "Водний транспорт"
+
+msgid "car_type_4"
+msgstr "Спецтехніка"
+
+msgid "car_type_5"
+msgstr "Причепи"
+
+msgid "car_type_6"
+msgstr "Вантажівки"
+
+msgid "car_type_7"
+msgstr "Автобуси"
+
+msgid "car_type_8"
+msgstr "Автобудинки"
+
+msgid "car_type_9"
+msgstr "Повітряний транспорт"
+
+msgid "car_type_10"
+msgstr "Сільгосптехніка"
+
+msgid "option_empty"
+msgstr "Не вказано"
+
+msgid "True"
+msgstr "Так"
+
+msgid "False"
+msgstr "Ні"
+
+msgid "main_msg"
+msgstr "<b>Налаштування моєї машини 🚙</b>"
+"\n<i>{is_running}</i>"
+"\n\nТип: <code>{type}</code>"
+"\nБренд: <code>{brand}</code>"
+"\nМодель: <code>{model}</code>"
+"\n"
+"\nІморт із США: <i>{is_usa}</i>"
+"\nБула в ДТП: <i>{is_accident}</i>"
+
+msgid "is_running_False"
+msgstr "Пошук вимкнений"
+
+msgid "is_running_True"
+msgstr "Пошук увімкнений"
+
+msgid "update_is_running_False_bt"
+msgstr "Увімкнути пошук 🔎"
+
+msgid "update_is_running_True_bt"
+msgstr "Вимкнути пошук 🔎"
+
+msgid "update_car_type_bt"
+msgstr "Вказати тип машини"
+
+msgid "update_car_type_msg"
+msgstr "Оберіть тип машини яку хочете знайти"
+
+msgid "update_car_brand_bt"
+msgstr "Вказати бренд машини"
+
+msgid "update_car_brand_msg"
+msgstr "Оберіть бренд машини яку хочете знайти"
+
+msgid "update_car_model_bt"
+msgstr "Вказати модель машини"
+
+msgid "update_car_brand_msg"
+msgstr "Оберіть модель машини яку хочете знайти"
+
+msgid "update_is_usa_True_bt"
+msgstr "Не хочу машину із США 🇺🇸"
+
+msgid "update_is_usa_False_bt"
+msgstr "Хочу машину із США 🇺🇸"
+
+msgid "update_is_accident_True_bt"
+msgstr "Не хочу машину після ДТП 💥"
+
+msgid "update_is_accident_False_bt"
+msgstr "Хочу машину після ДТП 💥"
+
+msgid "car_removed_msg"
+msgstr "Машина була придбана або видалена"
+
+msgid "car_changed_price_msg"
+msgstr "Ціна на машину була змінена: {old} 💵 -> {new} 💵"

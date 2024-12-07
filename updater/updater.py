@@ -107,7 +107,7 @@ class Updater(metaclass=SingletonMeta):
             await task
 
     async def process_update_car(self, car: Car, query: Query, user_ids: list[str]):
-        new_car = await autoria.get_car(id=car.id, brand=query.brand.key.lower(), model=query.model.key.lower(), query_key=query.key)
+        new_car = await autoria.get_car(id=car.id, brand=query.brand.key.lower(), model=query.model.key.lower(), query_key=query.key, with_auction=False)
 
         if not new_car:
             car.is_appeared = False
@@ -125,7 +125,7 @@ class Updater(metaclass=SingletonMeta):
 
             user_cars: list[UserCar] = await self.db.ex(dmth.GetMany(UserCar, car_id=car.id))
             for user_car in user_cars:
-                await send_car_changed_price_message(old_car, new_car, user_car)
+                await send_car_changed_price_message(old_car, car, user_car)
 
     async def update_cars(self):
         queries: list[Query] = await self.db.ex(dmth.GetMany(Query, is_running=True))

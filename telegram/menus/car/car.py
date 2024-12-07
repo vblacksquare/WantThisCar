@@ -108,7 +108,7 @@ async def send_car_channel_message(car: Car, channel_id: str, move: int = 0, is_
                 photo=photos[move],
                 photo_i=move + 1,
                 photo_amount=len(photos),
-                source=i18n.gettext("autoria_source", locale=language)
+                source=i18n.gettext("auction_source" if is_auction else "autoria_source", locale=language)
             ),
             parse_mode="html",
             link_preview_options=LinkPreviewOptions(
@@ -175,7 +175,7 @@ async def send_car_message(car: Car, message: Message, move: int = 0, is_auction
                 photo=photos[move],
                 photo_i=move + 1,
                 photo_amount=len(photos),
-                source=_("autoria_source")
+                source=_("auction_source" if is_auction else "autoria_source")
             ),
             parse_mode="html",
             link_preview_options=LinkPreviewOptions(

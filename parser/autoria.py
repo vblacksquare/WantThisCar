@@ -64,7 +64,7 @@ class Autoria(metaclass=SingletonMeta):
             for car_id in cars_ids
         ]
 
-    async def get_car(self, id: str, brand: str, model: str, query_key: str) -> Car | None:
+    async def get_car(self, id: str, brand: str, model: str, query_key: str, with_auction: bool = True) -> Car | None:
         data = None
         link = AUTORIA_CAR_LINK.format(id=id)
 
@@ -102,17 +102,17 @@ class Autoria(metaclass=SingletonMeta):
             location = soup.select_one("div.item[data-query*='type=city&cityId=']").get_text(strip=True)
             photos = [img.get("src") for img in soup.select("#photosBlock div.gallery-order div[class*='photo'] img")]
 
+            bidfax_link = None
             try:
-                bidfax_redirect = soup.select_one("script[data-technical-report]").get("data-bidfax-pathname")
-                bidfax_link = '/'.join((
-                    BIDFAX_ROOT,
-                    bidfax_redirect.split("/", maxsplit=2)[-1]
-                )) if bidfax_redirect else None
+                if with_auction:
+                    bidfax_redirect = soup.select_one("script[data-technical-report]").get("data-bidfax-pathname")
+                    bidfax_link = '/'.join((
+                        BIDFAX_ROOT,
+                        bidfax_redirect.split("/", maxsplit=2)[-1]
+                    )) if bidfax_redirect else None
 
             except Exception as err:
                 self.log.warning(f"No bidfax link for car {link}")
-
-                bidfax_link = None
 
             # next steps are to collect enought data to generate auction photos
             # auction_name and lot_number is required for url (you can find template in config.py -> MERCURY_CAR_PHOTO_LINK)

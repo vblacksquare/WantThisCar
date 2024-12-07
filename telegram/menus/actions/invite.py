@@ -24,7 +24,13 @@ async def invite(event: ChatMemberUpdated):
 
         destination = await db.ex(dmth.GetOne(Destination, id=user_id))
 
-        if event.new_chat_member.status.value == "administrator" and not destination:
+        try:
+            status_value = event.new_chat_member.status.value
+
+        except Exception as err:
+            status_value = event.new_chat_member.status
+
+        if status_value == "administrator" and not destination:
             destination = Destination(
                 id=user_id,
                 chat_id=chat_id

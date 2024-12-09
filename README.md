@@ -139,7 +139,7 @@ It uses jsonify module to transform from class to dict -> ./utils/jsonify.py
             
             self.fields = ["name", "key", "small_example"]
 
-    print(Example(name="test", key=1, small_example=SmallExample(test="hello")))
+    print(Example(name="test", key=1, small_example=SmallExample(test="hello")).to_dict())
 
 **Output:**
 
